@@ -62,6 +62,8 @@
         <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
 
         <button type="submit" class="btn btn-primary">Actualizar Artículo</button>
+        <a href="{{ route('articles.index') }}" class="btn btn-secondary">Volver a la lista</a>
+
     </form>
 </div>
 @endsection

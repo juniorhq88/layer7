@@ -18,12 +18,14 @@
             <p><strong>Actualizado el:</strong> {{ $article->updated_at->format('d/m/Y H:i:s') }}</p>
         </div>
         <div class="card-footer">
+            @if(Auth::user()->id === $article->user->id)
             <a href="{{ route('articles.edit', $article->id) }}" class="btn btn-primary">Editar</a>
             <form action="{{ route('articles.destroy', $article->id) }}" method="POST" style="display: inline-block;">
                 @csrf
                 @method('DELETE')
                 <button type="submit" class="btn btn-danger" onclick="return confirm('¿Estás seguro de que quieres eliminar este artículo?')">Eliminar</button>
             </form>
+            @endif
             <a href="{{ route('articles.index') }}" class="btn btn-secondary">Volver a la lista</a>
         </div>
     </div>

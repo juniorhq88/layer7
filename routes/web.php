@@ -12,10 +12,10 @@ Route::get('/', function () {
 Auth::routes();
 
 
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::middleware(['auth'])
     ->group(function () {
-        Route::get('/home', [HomeController::class, 'index'])->name('home');
-        Route::get('/home', [HomeController::class, 'home'])->name('home');
+        Route::get('/dashboard', [HomeController::class, 'dashboard'])->name('dashboard');
 
         Route::resource('/articles', ArticleController::class);
     });

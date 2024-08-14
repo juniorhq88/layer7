@@ -11,7 +11,7 @@
     </div>
     @endif
 
-    <table class="table">
+    <table class="table table-hovered">
         <thead>
             <tr>
                 <th>ID</th>
@@ -33,8 +33,8 @@
                 <td>{{ $article->price }}</td>
                 <td>{{ $article->user->name }}</td>
                 <td>
-                    @if(Auth::user()->id === $article->user->id)
                     <a href="{{ route('articles.show', $article->id) }}" class="btn btn-info">Ver</a>
+                    @if(Auth::user()->id === $article->user->id)
                     <a href="{{ route('articles.edit', $article->id) }}" class="btn btn-primary">Editar</a>
                     <form action="{{ route('articles.destroy', $article->id) }}" method="POST" style="display: inline-block;">
                         @csrf
