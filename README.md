@@ -25,3 +25,12 @@ npm run build
 ```
 php artisan test
 ```
+
+### Para correr las migraciones y los seeders:
+
+```
+php artisan migrate
+php artisan db:seed
+```
+
+### Usuario por defecto en el seeder test@example.com.

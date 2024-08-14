@@ -14,7 +14,15 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    {{
+                    Auth::user()->name . ' estas logueado'
+                    }}
+
+                    <div class="card">
+                        <h4>Articulos creados: {{ $articleCount }}</h4>
+                    </div>
+
+                    <a href="{{ route('articles.index') }} " class="btn btn-primary">Ver articulos</a>
                 </div>
             </div>
         </div>

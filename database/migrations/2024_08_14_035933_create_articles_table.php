@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->text('description');
             $table->integer('quantity')->default(0);
-            $table->double('price')->default(0.00);
+            $table->decimal('price', 8, 2)->default(0.00);
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
