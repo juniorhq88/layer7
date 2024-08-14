@@ -1,26 +1,26 @@
 ## Proyecto Layer 7
 
-# Rama principal: master
+### Rama principal: master
 
-# Instalar dependencias:
+### Instalar dependencias:
 
 ```
 composer install
 ```
 
-# Para correr los assets del proyecto:
+### Para correr los assets del proyecto:
 
 ```
 npm install && npm run dev
 ```
 
-# Para que los archivos css y js esten en produccion:
+### Para que los archivos css y js esten en produccion:
 
 ```
 npm run build
 ```
 
-# Para correr las pruebas:
+### Para correr las pruebas:
 
 ```
 php artisan test

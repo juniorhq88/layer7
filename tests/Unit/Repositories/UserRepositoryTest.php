@@ -52,7 +52,10 @@ class UserRepositoryTest extends TestCase
         $data = ['name' => 'Jane Doe'];
 
         $updatedUser = $this->userRepository->update($user->id, $data);
-        $this->assertEquals('Jane Doe', $updatedUser->name);
+
+        $this->assertTrue($updatedUser);
+
+        $this->assertDatabaseHas('users', ['id' => $user->id, 'name' => 'Jane Doe']);
     }
 
     public function test_it_can_delete_a_user()
