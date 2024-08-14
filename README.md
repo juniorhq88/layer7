@@ -45,4 +45,4 @@ php artisan migrate
 php artisan db:seed
 ```
 
-### Usuario por defecto en el seeder test@example.com.
+### Usuario por defecto en el seeder test@example.com, clave: password.
