@@ -46,3 +46,9 @@ php artisan db:seed
 ```
 
 ### Usuario por defecto en el seeder test@example.com, clave: password.
+
+### Para levantar el proyecto en localhost:8000:
+
+```
+php artisan serve
+```
