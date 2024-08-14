@@ -20,6 +20,18 @@ npm install && npm run dev
 npm run build
 ```
 
+### Para generar la llave necesaria
+
+```
+php artisan key:generate
+```
+
+### Para copiar el environment
+
+```
+cp .env.example .env
+```
+
 ### Para correr las pruebas:
 
 ```
